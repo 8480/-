@@ -1,0 +1,27 @@
+<view class="head">
+  <view class="search">
+    <input class="input" confirm-type="search" placeholder="请输入查询内容" value="{{inputValue}}" bindinput="onBindSearch"  bindconfirm='onFinishTap' id="test1">
+    </input>
+    <button class="button" bindtap="onFinishTap">搜索</button>
+  </view>
+</view>
+<block wx:for="{{news}}" wx:for-item="item" wx:key="property">
+  <view catchtap="onNewsTap" data-newsId="{{item.id}}" data-newsImageurls="{{item.imageurls[0].url}}" data-newsTitle="{{item.title}}" data-newsPubDate="{{item.pubDate}}" data-newsSource="{{item.source}}" data-newsContent="{{item.content}}" data-newsHavePic="{{item.havePic}}">
+    <view class='news-container'>
+      <text class="news-date">{{item.pubDate}}</text>
+      <text class="news-title">{{item.title}}</text>
+      <image class="news-img" wx:if="{{item.havePic}}" src="{{item.imageurls[0].url}}"></image>
+      <text class="news-desc">{{item.desc}}</text>
+      <view class="news-style">
+        <text class="news-style-source">{{item.source}}</text>
+        <view class="news-style-like">
+          <image class="news-style-like-image" src="../../images/icon/view.png"></image>
+          <text class="news-style-like-font">99</text>
+          <image class="news-style-like-image" src="../../images/icon/chat.png"></image>
+          <text class="news-style-like-font">50</text>
+        </view>
+      </view>
+    </view>
+  </view>
+</block>
+

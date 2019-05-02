@@ -1,0 +1,15 @@
+{
+  "pages": [
+    "pages/news/news",
+    "pages/news/news-content/news-content",
+    "pages/logs/logs",
+    "pages/news/news-search/news-search"
+  ],
+  "window": {
+    "enablePullDownRefresh": true,
+    "backgroundTextStyle": "dark",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "WeChat",
+    "navigationBarTextStyle": "black"
+  }
+}
